@@ -39,7 +39,7 @@ public class QuestionJianZhiOffer6 {
 //    }
 
     // 方法二：
-    //      上面的方法也要遍历两边，遍历链表的方法同样也需要两边，那么为什么要使用额外空间呢，所以：
+    //      上面的方法也要遍历两边，遍历链表的方法同样也需要两边，那么为什么要多使用一个ArrayList呢，所以：
     public int[] reversePrint(ListNode head) {
         int count = 0;
         ListNode currentNode = head;
