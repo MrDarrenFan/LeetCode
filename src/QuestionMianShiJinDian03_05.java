@@ -27,7 +27,7 @@
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class QuestionMianShiJinDian0305 {
+public class QuestionMianShiJinDian03_05 {
 }
 
 /**

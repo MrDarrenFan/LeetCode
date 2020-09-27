@@ -25,7 +25,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class QuestionMianShiJinDian1619 {
+public class QuestionMianShiJinDian16_19 {
 
     public static void main(String[] args) {
 
