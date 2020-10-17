@@ -60,6 +60,7 @@ public class Solution117 {
 
     // 遍历当前层结点时，建立下一层子结点的next关系
     // 此思想相较于队列层次遍历可以省下额外空间，使空间复杂度优化为O(1)
+    // 此题与116题的区别是，116题为完美二叉树（满二叉树）
     public Node connect(Node root) {
         if (root == null) {
             return null;
@@ -103,7 +104,7 @@ public class Solution117 {
         return root;
     }
 
-    // 该题数据结构
+    // 该题题目所给的数据结构
     static class Node {
         public int val;
         public Node left;
