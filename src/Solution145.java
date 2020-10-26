@@ -31,10 +31,7 @@
  * }
  */
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 public class Solution145 {
 
@@ -43,18 +40,18 @@ public class Solution145 {
         TreeNode currentNode = root;    // 当前结点
         TreeNode preNode = null;    // 上一个遍历的结点
         List<Integer> result = new ArrayList<>();
-        Deque<TreeNode> dequeStack = new ArrayDeque<>();
+        Deque<TreeNode> dequeStack = new LinkedList<>();
 
         while (!dequeStack.isEmpty() || currentNode != null) {
             if (currentNode != null) {
-                dequeStack.addLast(currentNode);
+                dequeStack.addFirst(currentNode);
                 currentNode = currentNode.left;     // 左结点优先
             } else {
-                currentNode = dequeStack.peekLast();
+                currentNode = dequeStack.peekFirst();
                 if (currentNode.right == null || currentNode.right == preNode) {    // 当前结点没有右节点，或者右节点已经遍历过的时候
                     result.add(currentNode.val);
                     preNode = currentNode;
-                    dequeStack.pollLast();
+                    dequeStack.removeFirst();
                     currentNode = null;
                 } else {    // 有右节点且没有遍历过，则先遍历右节点（因为后序为：左右根）
                     currentNode = currentNode.right;
